@@ -1,0 +1,70 @@
+@use postcss-nested;
+@use postcss-simple-vars;
+
+$backgroundColor: #000000;
+$color: #ffffff;
+
+body {
+	color: $color;
+	background-color: $backgroundColor;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 5em;
+	margin-top: 50px;
+}
+
+p {
+	font-size: 2em;
+}
+
+#tempunit {
+	color: red;
+	cursor: pointer;
+	&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			color: #ff8300;
+		}
+		&:active,
+		&.active {
+			color: #333333;
+			box-shadow: none;
+		}
+}
+
+#icon {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+.footer {
+	text-align: center;
+	margin: 15px auto;
+	display: block;
+	.button {
+		background-color: $backgroundColor;
+		color: $color;
+		border-radius: 50%;
+		display: inline-block;
+		width: 50px;
+		text-align: center;
+		font-size: 40px;
+		line-height: 48px;
+		transition: 0.3s ease-in-out;
+		-webkit-transition: 0.3s ease-in-out;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			color: #999999;
+		}
+		&:active,
+		&.active {
+			color: #333333;
+			box-shadow: none;
+		}
+	}
+}
